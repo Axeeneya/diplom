@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- стилей страницы -->
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="stylesheet" type="text/css" href="style/Light.css">
+    <link rel="stylesheet" type="text/css" href="style/Dark.css">
+    <script src="https://kit.fontawesome.com/2239b16057.js" crossorigin="anonymous"></script>
+    <!-- импорт шрифтов с сервиса googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- наименование сайта -->
+    <title>Карта</title>
+
+    <!-- импорт библиотеки jquery, необходимой для некоторых функций на сайте -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body class="themeLight">   
+    <div class=page>
+        <!-- верхняя информационная панель -->
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <!-- сам "бургер" -->
+        <div class="hamburger-lines">
+            <!-- линии "бургера" -->
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <!-- блок с основным функционалом -->
+        <div class="content">
+            <!-- блок для панели управления -->
+            <div class="listPoints"> 
+                <h1>Панель управления</h1>
+                <!-- список элементов управления--> 
+                <h2><i class="fa-solid fa-camera"></i></h2>
+                <div class="ulList">
+                    <ul>
+                        <li id="showCams" class="hidden"><i class="fa-solid fa-eye"></i> Показать камеры</li>
+                        <li id="delCams" class=""><i class="fa-solid fa-eye-slash"></i> Скрыть камеры</li>           
+                    </ul>
+                </div>
+                <h2><i class="fa-solid fa-arrow-trend-down"></i></h2>
+                <div class="ulList">
+                    <ul id = "list">
+                    </ul>
+                </div>
+                <div class="ulList">
+                    <ul>
+                        <li id="showLines" class="hidden">Показать все линии</li>
+                        <li id="delLines" class="">Скрыть все линии</li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- блок для размещения карты-->
+            <div class="map">
+                                
+                <!-- блок для самой карты -->
+                <div id="map">
+                    
+                </div>
+
+                <!-- кнопки "фуллскрин" "лоускрин" -->
+                <img src="images/fullscreen.png" class="fullscreenBtn">
+                <img src="images/lowscreen.png" class="lowscreenBtn hidden">
+            </div>
+        </div>
+    </div>
+    <div class="ThemeChenger">
+        <i class="fa-solid fa-sun darkThemebtn" title="светлая тема"></i>
+        <i class="fa-solid fa-moon lightThemebtn" title="темная тема"></i>
+    </div>
+    <!-- импорт api Яндекс карт -->
+    
+    
+    <script  src="https://api-maps.yandex.ru/2.0/?lang=ru-RU&coordorder=longlat&load=package.full&mode=debug"></script>
+    <!-- импорт функций, для работы функционала сайта -->
+    <script type="text/javascript" src="js/map.js"></script>
+    <!-- импорт слушателей кликов для элементов на сайте -->
+    <script type="text/javascript" src="js/listeners.js"></script>
+</body>
+</html>

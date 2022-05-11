@@ -1,0 +1,296 @@
+/* 	атрибут 				значение */
+/* значение для всей страницы*/
+body {
+	margin: 				0; /* удаление отступов */
+	font-family: 			'Nunito', sans-serif; /* шрифт Nunito */
+	background: 			#fbfcbb; /* установка фона */
+	transition: 			0.5s;
+}
+/* вся страница */
+.page {
+  	display:				flex; /* установка дисплея типа flex: для удобства размещения элементов*/
+  	flex-direction: 		column; /* дочерние блоки идут в столбик */
+  	height: 				100vh; /* высота 100% видимой области */
+}
+/* верхняя информационная панель панель*/
+.header {
+ 	line-height: 			60px; /* высота 60px */
+ 	background: 			lightblue; /* фон lightblue*/
+ 	text-align: 			center; /* выравнивание текста по центру */
+}
+/* удаление системных оступов у тега h1 */
+h1 {
+	padding: 				0; /* внутренние отступы */
+	margin: 				0; /* Внешние отступы */
+	transition: 			1s;
+}
+/* панель управления */
+.listPoints {
+	width: 					30%; /* ширина 30% страницы */
+	height: 				100%; /* высота: максимальная */
+}
+/* блок с основным содержимым страницы */
+.content {
+  display: 					inline-flex; /* блоки*/
+  height: 					100%; /* высота максимальная */
+  position: 				relative; /* относительное позиционирование */
+}
+/* блок для карты */
+.map {
+	height: 				100%; /* высота максимальная*/
+	width: 					70%; /* ширина 70% страницы */
+	position: 				absolute; /* абсолютное позиционирование */
+	right: 					0; /* приравнивание к правому краю */
+	box-sizing: 			border-box;	/* внутренний отсуп вычитается из размера блока */
+    padding: 				20px; /* внутренний отступ 20px */
+
+}
+/* блок в котором отрисовывается карта */
+#map {
+	width: 					100%; /* 100% ширина родительского блока*/
+	height: 				100%; /* 100% высота родительского блока */
+	border: 				2px solid #000; /* рамка */
+	box-shadow: 			0px 0px 14px 0px #000000; /* тень */
+	border-radius: 			15px; /*радиус скругления углов*/
+}
+/* сама карта */
+#map > ymaps {
+	border-radius: 			15px; /* скругление углов*/
+	overflow:	 			hidden; /*всё что за пределами - скрыто*/
+}
+/* изображения в метках */
+.imgPoint {
+	height: 				200px; /* высота 200px */
+	width: 					auto; /* ширина автоматически*/
+}
+
+.ThemeChenger {
+	width: 14%;
+	height: 8%;
+	position: fixed;
+	bottom: 0;
+	left: 45%;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	opacity: 0.7;
+	background: #000;
+}
+
+.ThemeChenger i {
+	color: #fff;
+	font-size: 40px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.darkThemebtn {
+	left: 10%;
+	top: 15%;
+}
+.lightThemebtn {
+	right: 10%;
+	top: 15%;
+}
+
+
+/* заголовки в панели управления */
+h1 {
+	cursor: 				auto; /* курсор стандартный */
+	font-size: 				30px; /* размер шрифта */
+	font-weight: 			900;
+	color: 					#000;
+	margin-top: 			20px; /* отступ сверху */
+	text-align: 			center;
+	margin: 0;
+	padding: 				20px 0px 0px 0px;
+}
+.ulList { 
+	border-radius: 			30px;
+	padding: 				15px 10px 15px 20px;
+	margin: 				10px 20px 10px 20px;
+	transition: 			0.5s;
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+li {
+	transition: 			2s;
+	cursor: 				pointer;
+}
+li:hover {
+	text-decoration: 		underline;
+}
+/* элементы панели управления*/
+
+/* скрытые эллементы */
+.hidden, .hamburger-lines, .checkbox{
+	display: 				none;
+}
+/* удаление маркеров у списка*/
+ul li {
+	list-style: 			none;
+}
+/* кнопки "фуллскрин" "лоускрин" */
+.fullscreenBtn, .lowscreenBtn {
+	width: 					30px; /* ширина 30px */
+	border-radius: 			6px; /* скругление углов */
+	height: 				30px; /* высота 30px */
+	right: 					25px; /* отсуп справа */
+	top: 					25px; /* отступ сверху */
+	cursor: 				pointer; /* курсор, указывающий, что можно нажать */
+	transition: 			0.5s; /* время анимации */
+}
+/* кнопка "фуллскрин" */
+.fullscreenBtn {
+	position: 				absolute; /* абсолютное позиционирование*/
+}
+/* анимация при наведении на кнопки "фуллскрин" "лоу скрин" */
+.fullscreenBtn:hover, .lowscreenBtn:hover {
+	background: 			lightgrey; /* светло-серый фон */
+
+}
+/* кнопка "лоускрин" и класс для фуллскрин карты */
+.lowscreenBtn, .fullscreenMap {
+	position: 				fixed; /* фиксированное позиционирование*/
+}
+/* карта в фулл скрине */
+.fullscreenMap {
+	width: 					100%; /* ширина 100% экрана */
+	height: 				100%; /* высота 100% экрана */
+	left: 					0; /* приравнивание к левому краю */
+	top: 					0; /* приравнивание к верхнему краю */
+}
+#list {
+	max-height: 			30vh;
+	overflow-y: 			auto;
+}
+ul li {
+	padding: 5px 0px 5px 0px ;
+}
+h2 {
+	text-align: center;
+	color: #666;
+	padding: 0;
+	margin: 0;
+}
+
+/* стили мобильной версии */
+@media (max-width: 800px){
+	/* блок для размещения карты */
+	.map {
+		width: 				100%; /* ширина 100% экрана */
+		padding: 			0; /* удаление отсупов */
+	}
+	/* сама карта */
+	#map > ymaps, #map{
+		border-radius: 		0; /* удаление скругления углов */
+		box-shadow: 		none; /* удаление тени*/
+	}
+	/* блок для отрисовки карты */
+	#map {
+		border: 			none; /* удаление рамки*/
+	}
+	/* кнопка "фулл скрин" и "лоускрин" */
+	.fullscreenBtn, .lowscreenBtn{
+		display: none; /* скрытие элементов */
+	}
+	/* панель управления */
+	.listPoints {
+		position: 			fixed;
+		z-index: 			1;
+		width: 				100%;
+		right: 				100%;
+		opacity: 			0.5;
+		transition: 		1s;
+	}
+	/* видимая панель управления */
+	.show {
+		right: 				0;
+		opacity: 			1;
+		background-color: 	#F5DEB3;
+	}
+	/* верхняя панель */
+	.header {
+		border-bottom: 		2px solid #999;
+	}
+	.hamburger-lines {
+  		display: 			block;
+  		height: 			26px;
+  		width: 				32px;
+  		position: 			absolute;
+  		top: 				17px;
+  		left: 				20px;
+  		z-index: 			2;
+  		display: 			flex;
+  		flex-direction: 	column;
+  		justify-content: 	space-between;
+	}
+
+	.hamburger-lines .line {
+  		display: 			block;
+  		height: 			4px;
+  		width: 				100%;
+  		border-radius: 		10px;
+  		background: 		#0e2431;
+	}
+	.hamburger-lines .line1 {
+  		transform-origin: 	0% 0%;
+  		transition: 		transform 0.4s ease-in-out;
+	}
+	.hamburger-lines .line2 {
+  		transition: 		transform 0.2s ease-in-out;
+	}
+	.hamburger-lines .line3 {
+  		transform-origin: 	0% 100%;
+  		transition: 		transform 0.2s ease-in-out;
+	}
+
+
+	input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  		transform: 			rotate(45deg);
+	}
+
+	input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  		transform: 			scaleY(0);
+	}
+	input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  	transform: 				rotate(-45deg);
+	}
+	ul {
+		margin-left: 15px;
+	}
+	li {
+		text-align: center;
+	}
+	.checkbox {
+  		position: 			absolute;
+  		display: 			block;
+  		height: 			32px;
+  		width: 				32px;
+  		top: 				10px;
+  		left: 				15px;
+  		z-index: 			5;
+  		opacity: 			0;
+  		cursor: 			pointer;
+	}
+
+	.ThemeChenger {
+		position: fixed;
+		display: inline-flex;
+		flex-direction: column;
+		height: auto;
+		border-top-left-radius: 0;
+		width: auto;
+		left: 0%;
+		bottom: 0;
+
+	}
+	.ThemeChenger i {
+		position: relative;
+		display: flex;
+		left: 0;
+		right: 0;
+		padding: 10px;
+	}
+}
